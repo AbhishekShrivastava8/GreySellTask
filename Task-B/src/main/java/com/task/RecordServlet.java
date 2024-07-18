@@ -15,20 +15,6 @@ import jakarta.servlet.http.HttpServletResponse;
 public class RecordServlet extends HttpServlet {
     private List<Records> records = new ArrayList<>();
 
-//  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//      String action = request.getParameter("action");
-//      if ("view".equals(action)) {
-//          String email = request.getParameter("email");
-//          Record record = records.stream().filter(r -> r.getEmail().equals(email)).findFirst().orElse(null);
-//          request.setAttribute("record", record);
-//          RequestDispatcher dispatcher = request.getRequestDispatcher("records.jsp");
-//          dispatcher.forward(request, response);
-//      } else {
-//          request.setAttribute("records", records);
-//          RequestDispatcher dispatcher = request.getRequestDispatcher("records.jsp");
-//          dispatcher.forward(request, response);
-//      }
-//  }
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       String name = request.getParameter("name");
